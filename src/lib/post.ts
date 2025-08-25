@@ -78,3 +78,28 @@ async function getPostMeta(slug: string) {
     frontmatter: data as PostFrontmatter,
   };
 }
+
+export type Post = {
+  id: string
+  title: string
+  date: string
+  content?: string
+}
+
+// 如果你已有 getPosts()，确保它返回的每篇文章有个可选的 content 字段（今天用于详情页展示）
+export function getPosts(): Post[] {
+  return [
+    { id: '1', title: '我的第一篇文章', date: '2025-08-24', content: '这是第一篇文章的正文内容。' },
+    { id: '2', title: '使用 Next.js 搭建博客', date: '2025-08-25', content: '这是第二篇文章的正文内容。' },
+  ]
+}
+
+// ✅ 新增：按 id 获取单篇
+export function getPostById(id: string): Post | undefined {
+  return getPosts().find(p => p.id === id)
+}
+
+// ✅ 新增：用于 SSG 生成静态路径
+export function getAllIds(): string[] {
+  return getPosts().map(p => p.id)
+}
