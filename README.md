@@ -1,39 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# vlone-blog
 
-## Getting Started
+基于 **Next.js 15 + React + Tailwind CSS + MDX** 搭建的个人博客。  
+支持文章列表、文章详情页，未来会逐步完善搜索、标签分类、评论等功能。
 
-First, run the development server:
+---
+
+## 🚀 本地运行
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 克隆仓库
+git clone https://github.com/vlonezhao/vlone-blog.git
+cd vlone-blog
+
+# 安装依赖（推荐 pnpm）
+pnpm install
+
+# 本地开发
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 代码提交规范
+type（类型）
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+feat: 新功能
 
-## Learn More
+fix: 修复 bug
 
-To learn more about Next.js, take a look at the following resources:
+docs: 文档修改
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+style: 代码格式（空格、缩进等，不影响逻辑）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+refactor: 代码重构（不影响功能）
 
-## Deploy on Vercel
+test: 增加或修改测试
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# vlone-blog
-The Diary of an Ordinary Chinese Coder
+chore: 构建或工具配置的更改
